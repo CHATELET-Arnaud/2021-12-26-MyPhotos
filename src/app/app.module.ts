@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { PhotoComponent } from './photo/photo.component';
 import { registerLocaleData } from '@angular/common';
-import * as fr from '@angular/common/locales/fr'
+import * as fr from '@angular/common/locales/fr';
+import { PhotoListComponent } from './photo-list/photo-list.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    PhotoComponent
+    PhotoComponent,
+    PhotoListComponent
   ],
   imports: [
     BrowserModule
