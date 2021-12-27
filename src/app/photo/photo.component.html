@@ -1,0 +1,11 @@
+<div class="photo-card">
+    <h2>{{ photo.title }}</h2>
+    <p>Mis en ligne le {{ photo.createdDate }}</p>
+    <img [src]="photo.imageUrl" [alt]="photo.title">
+    <p>{{ photo.description }}</p>
+    <p>
+        <button (click)="onLike()">{{ buttonText }}</button>
+        👍 {{ photo.likes }}
+    </p>
+    <p *ngIf="photo.location === 'Paris'">Photo prise à {{ photo.location }}</p>
+</div>
