@@ -12,6 +12,7 @@ export class PhotoComponent {
   @Input() photo!: Photo;
 
   onLike() {
+    //this.photo.likes++;
     if (this.buttonText === 'I like it!') {
       this.photo.likes++;
       this.buttonText = 'I don\'t like it!';

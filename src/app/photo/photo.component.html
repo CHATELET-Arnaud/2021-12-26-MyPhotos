@@ -1,11 +1,11 @@
-<div class="photo-card">
-    <h2>{{ photo.title }}</h2>
-    <p>Mis en ligne le {{ photo.createdDate }}</p>
+<div class="photo-card" [ngClass]="{ liked: buttonText === 'I don\'t like it!' }">
+    <h2>{{ photo.title | uppercase }}</h2>
+    <p>Mis en ligne le {{ photo.createdDate | date : 'longDate' }}</p>
     <img [src]="photo.imageUrl" [alt]="photo.title">
     <p>{{ photo.description }}</p>
     <p>
         <button (click)="onLike()">{{ buttonText }}</button>
-        👍 {{ photo.likes }}
+        <span [ngStyle]="{ color: 'rgb(0, ' + photo.likes + ', 0)' }">👍 {{ photo.likes }}</span>
     </p>
     <p *ngIf="photo.location === 'Paris'">Photo prise à {{ photo.location }}</p>
 </div>
