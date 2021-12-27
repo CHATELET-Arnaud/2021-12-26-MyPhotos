@@ -1,15 +1,8 @@
-export class MyPhoto {    
-    title!: string;
-    description!: string;
-    createdDate!: Date;
-    likes!: number;
-    imageUrl!: string;
-  
-    constructor(title: string, description: string, createdDate: Date, likes: number, imageUrl: string) {      
-      this.title = title;
-      this.description = description;
-      this.createdDate = createdDate;
-      this.likes = likes;
-      this.imageUrl = imageUrl;
+export class MyPhoto {     
+    constructor(public title: string,
+                public description: string,
+                public createdDate: Date,
+                public likes: number,
+                public imageUrl: string) {      
     }
 }
